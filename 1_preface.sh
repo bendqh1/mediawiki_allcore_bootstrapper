@@ -11,4 +11,4 @@ set -x && complete -r
 ## Declare web application root variables:
 web_application_root="${HOME}/www"
 read domain
-domain_dir="${web_application_root}/${domain}/www"
+domain_dir="${web_application_root}/${domain}/public_html"
