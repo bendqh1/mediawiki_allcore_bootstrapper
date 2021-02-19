@@ -6,8 +6,8 @@ general_backups_dir="${HOME}/mediawiki_general_backups"
 specific_backups_dir="${HOME}/mediawiki_specific_backups"
 
 ## Create general AND Specific backup directories: ##
-if [[ -d "${general_backups_dir}" ]]; then echo "${general_backups_dir} already exists"; else mkdir testdir; fi
-if [[ -d "${specific_backups_dir}" ]]; then echo "${general_backups_dir} already exists"; else mkdir testdir; fi
+if [[ ! -d "${general_backups_dir}" ]]; then mkdir -p "${general_backups_dir}"; fi
+if [[ ! -d "${specific_backups_dir}" ]]; then mkdir -p "${specific_backups_dir}"; fi
 
 ## Create specific backups (some files have glob patterns outside quote marks): ##
 cp "${domain_dir}/LocalSettings.php" "${specific_backups_dir}"
