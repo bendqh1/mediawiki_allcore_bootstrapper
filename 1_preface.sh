@@ -9,6 +9,6 @@ set -x && complete -r
 # set -euo # If you plan to test the script line by line (or block by block) don't use it, as mistakes would terminate the session;
 
 ## Declare web application root variables:
-web_application_root="${HOME}/www" 
+web_application_root="${HOME}/www"
 read domain
 domain_dir="${web_application_root}/${domain}"
