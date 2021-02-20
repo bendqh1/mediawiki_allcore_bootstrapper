@@ -10,6 +10,6 @@ cp "${domain_dir}/${domain}.png" "${specific_backups_dir}" &&
 cp "${domain_dir}"/.htaccess* "${specific_backups_dir}" &&
 cp "${domain_dir}"/google*.html "${specific_backups_dir}"
 
-## Test specific backups: ##
+## Test filetree backups: ##
 ll $general_backups_dir &&
 ll $specific_backups_dir
