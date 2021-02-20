@@ -23,12 +23,12 @@ ll $specific_backups_dir
 zip -r "${general_backups_dir}/${domain}-directory-backup-${current_date}.zip" "${domain_dir}"
 
 ## Create web application database general backup: ##
-read -s dbname
-read -s dbusername
-mysqldump -u"$dbusername" -p "$dbname" > "${general_backups_dir}/${dbusername}-${current_date}.sql"
-# -u && -p and dbname variable expansions shouldn't have "${}", rather, just "$";
-# If one wants to prompt dbusername password, -p should include a following whitespace character;
-# In general, dbusername and dbname variables must be different variables even if their values are the same;
+read -s db_name
+read -s db_nonroot_user_name
+mysqldump -u"$db_nonroot_user_name" -p "$db_name" > "${general_backups_dir}/${db_nonroot_user_name}-${current_date}.sql"
+# -u && -p and db_name variable expansions shouldn't have "${}", rather, just "$";
+# If one wants to prompt db_nonroot_user_name password, -p should include a following whitespace character;
+# In general, db_nonroot_user_name and db_name variables must be different variables even if their values are the same;
 # Database Management Programs (i.e mysqldump, PHPMyAdmin) can produce databases in different sizes due to different data organization methods (as well as caching);
 
 ## Test general backups: ##
