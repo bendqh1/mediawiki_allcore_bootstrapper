@@ -2,6 +2,7 @@
 
 ## Carefully prepare to download, install and configure MediaWiki and specific backups: ##
 cd "${web_application_root}"
+ll
 rm -rf "${domain_dir}"
 
 ## Download and configure MediaWiki core: ##
