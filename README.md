@@ -1,8 +1,8 @@
 # mediawiki_allcore_bootstrapper
 
 ## Tracing and debugging
-One might want to add set -x && complete -r to .bashrc for full traces;
-One might want to run set -euo to .bashrc for debugging; if so and one tests the script line by line or block by block, any mistake would terminate the session;
+One might want to add `set -x && complete -r` to .bashrc for full traces;
+One might want to run `set -euo` to .bashrc for debugging; if so and one tests the script line by line or block by block, any mistake would terminate the session;
 
 ## Additional information
 https://unix.stackexchange.com/questions/635287/xor-in-shell-globs;
