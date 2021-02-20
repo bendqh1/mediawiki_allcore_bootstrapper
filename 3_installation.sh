@@ -1,6 +1,6 @@
 #!/bin/bash
 
-## Prepare to download, install and configure MediaWiki and specific backups: ##
+## Carefully prepare to download, install and configure MediaWiki and specific backups: ##
 cd "${web_application_root}"
 rm -rf "${domain_dir}"
 
