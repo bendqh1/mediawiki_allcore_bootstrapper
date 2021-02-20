@@ -11,7 +11,7 @@ read domain &&
 read db_name &&
 read db_nonroot_user_name &&
 web_application_root="${HOME}/www" &&
-domain_dir="${web_application_root}/${domain}/public_html" &&
+domain_dir="${web_application_root}/${domain}/public_html"
 
 ## Declare backup variables:
 current_date="$(date +%d-%m-%Y-%H-%M-%S)" &&
