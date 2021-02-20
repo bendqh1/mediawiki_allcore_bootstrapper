@@ -2,9 +2,10 @@
 
 ## Declare existing installation backup variables:
 current_date="$(date +%d-%m-%Y-%H-%M-%S)" &&
-specific_backups_dir="${HOME}/mediawiki_specific_backups" &&
-general_backups_dir="${HOME}/mediawiki_general_backups"
+general_backups_dir="${HOME}/mediawiki_general_backups" &&
+specific_backups_dir="${HOME}/mediawiki_specific_backups"
+
 
 ## If backup directories don't exist, create them:
-if [ ! -d "${general_backups_dir}" ]; then mkdir -p "${general_backups_dir}"; fi &&
-if [ ! -d "${specific_backups_dir}" ]; then mkdir -p "${specific_backups_dir}"; fi
+rm -rf "${general_backups_dir}" ; mkdir -p "${general_backups_dir}" &&
+rm -rf "${specific_backups_dir}" ; mkdir -p "${specific_backups_dir}"
