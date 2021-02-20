@@ -19,5 +19,5 @@ read -s db_name &&
 read -s db_nonroot_user_name
 
 ## Declare file tree backup variables:
-general_backups_dir="${HOME}/mediawiki_general_backups" &&
-specific_backups_dir="${HOME}/mediawiki_specific_backups"
+specific_backups_dir="${HOME}/mediawiki_specific_backups" &&
+general_backups_dir="${HOME}/mediawiki_general_backups"
