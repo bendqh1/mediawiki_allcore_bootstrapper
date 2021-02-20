@@ -4,7 +4,8 @@
 cd "${domain_dir}"
 
 ## Create a new sitemap: ##
-rm -rf "${domain_dir}/sitemap" ; mkdir -p "${domain_dir}/sitemap"
+rm -rf "${domain_dir}/sitemap"
+mkdir -p "${domain_dir}/sitemap"
 
 php "${domain_dir}/maintenance/generateSitemap.php" \
 --memory-limit=50M \
