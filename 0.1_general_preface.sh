@@ -8,4 +8,4 @@ read domain
 read db_name
 read db_nonroot_user_name
 web_application_root="${HOME}/www"
-domain_dir="${web_application_root}/${domain}/"
+domain_dir="${web_application_root}/${domain}"
