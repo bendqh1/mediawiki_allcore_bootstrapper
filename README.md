@@ -15,4 +15,4 @@ With GNU find I used single quote marks instead double ones (with the exception 
     mkdir public_html
     mv !(public_html) public_html
     
-Any .htaccess inside the medium directory (www/**example.com**/public_html) should be deleted; the medium directory is example.com.
+Also, any .htaccess inside the medium directory (www/**example.com**/public_html) should be deleted; the medium directory is example.com.
