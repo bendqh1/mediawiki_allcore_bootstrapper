@@ -1,8 +1,8 @@
 #!/bin/bash
 
 ## Declare web application directory backup variables: ##
-current_date="$(date +%d-%m-%Y-%H-%M-%S)"
-general_backups_dir="${HOME}/mediawiki_general_backups"
+current_date="$(date +%d-%m-%Y-%H-%M-%S)" &&
+general_backups_dir="${HOME}/mediawiki_general_backups" &&
 specific_backups_dir="${HOME}/mediawiki_specific_backups"
 
 ## Create general AND Specific backup directories: ##
