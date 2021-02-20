@@ -13,6 +13,7 @@ php "${domain_dir}/maintenance/generateSitemap.php" \
 --urlpath=/sitemap/ \
 --server=https://"${domain}" \
 --compress=yes
+
 # Ensure that robots.txt sitemap directive is:
 # Sitemap: https://"${domain}"/sitemap/sitemap-index-"${domain}".xml
 
