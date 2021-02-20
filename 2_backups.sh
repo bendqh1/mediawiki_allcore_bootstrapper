@@ -17,7 +17,7 @@ cp "${domain_dir}"/.htaccess* "${specific_backups_dir}" &&
 cp "${domain_dir}"/google*.html "${specific_backups_dir}"
 
 ## Test specific backups: ##
-ll "${specific_backups_dir}"
+ll $specific_backups_dir
 
 ## Create web application root general backup: ##
 zip -r "${general_backups_dir}/${domain}-directory-backup-${current_date}.zip" "${domain_dir}"
@@ -32,4 +32,4 @@ mysqldump -u"$dbusername" -p "$dbname" > "${general_backups_dir}/${dbusername}-$
 # Database Management Programs (i.e mysqldump, PHPMyAdmin) can produce databases in different sizes due to different data organization methods (as well as caching);
 
 ## Test general backups: ##
-ll "${general_backups_dir}"
+ll $general_backups_dir
