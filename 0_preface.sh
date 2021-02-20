@@ -10,4 +10,14 @@
 read domain &&
 web_application_root="${HOME}/www" &&
 domain_dir="${web_application_root}/${domain}/public_html" &&
+
+## Declare general backup variables:
 current_date="$(date +%d-%m-%Y-%H-%M-%S)"
+
+## Declare database backup variables:
+read -s db_name &&
+read -s db_nonroot_user_name
+
+## Declare file tree backup variables:
+general_backups_dir="${HOME}/mediawiki_general_backups" &&
+specific_backups_dir="${HOME}/mediawiki_specific_backups"
