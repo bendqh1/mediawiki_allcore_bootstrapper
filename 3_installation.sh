@@ -4,9 +4,6 @@
 cd "${web_application_root}"
 rm -rf "${domain_dir}"
 
-## Declare script variables: ##
-latest_mediawiki_core="https://releases.wikimedia.org/mediawiki/1.34/mediawiki-1.34.2.tar.gz"
-
 ## Download and configure MediaWiki core: ##
 wget "${latest_mediawiki_core}" &&
 find . -maxdepth 1 -iname 'mediawiki*.tar.gz' -type f -exec tar -xzf {} \; && 
