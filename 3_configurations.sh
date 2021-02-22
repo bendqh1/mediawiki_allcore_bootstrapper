@@ -1,6 +1,6 @@
 #!/bin/bash
 
-## Prepare to create and configure a new sitemap and to update database: ##
+## Prepare for configurations:
 cd "${domain_dir}"
 
 ## Create a new sitemap: ##
@@ -15,9 +15,9 @@ php "${domain_dir}/maintenance/generateSitemap.php" \
 --server=https://"${domain}" \
 --compress=yes
 
-# Ensure that robots.txt sitemap directive is:
-# Sitemap: https://"${domain}"/sitemap/sitemap-index-"${domain}".xml
-
-## Update database (One might need to change LocalSettings.php before doing so): ##
+## Update database (One might need to change LocalSettings.php before doing so):
 php "${domain_dir}/maintenance/update.php" --quick &&
 php maintenance/rebuildrecentchanges.php
+
+# Ensure that robots.txt sitemap directive is:
+# Sitemap: https://"${domain}"/sitemap/sitemap-index-"${domain}".xml
