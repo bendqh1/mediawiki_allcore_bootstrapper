@@ -8,4 +8,4 @@ read domain
 read db_name
 read db_nonroot_user_name
 read web_application_root
-domain_dir="${web_application_root}/${domain}"
+domain_dir="${web_application_root}/${domain}/public_html" # public_html is added for SiteGround customers
