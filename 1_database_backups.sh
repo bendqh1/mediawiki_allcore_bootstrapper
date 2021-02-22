@@ -1,10 +1,10 @@
 #!/bin/bash
 
 ## Create database general backup:
-mysqldump -u"$db_nonroot_user_name" -p "$db_name" > "${general_backups_dir}/${db_nonroot_user_name}-${current_date}.sql"
+mysqldump -u"$db_nonroot_user_name" -p "$db_name" > "${latest_general_backups_dir}/${db_nonroot_user_name}-${current_date}.sql"
 
 ## Test database general backup:
-ll $general_backups_dir
+ll $latest_general_backups_dir
 
 ## Chapter notes
 # -u && -p and db_name variable expansions shouldn't be wrapped with "${}", rather, just with "$" (as above);
