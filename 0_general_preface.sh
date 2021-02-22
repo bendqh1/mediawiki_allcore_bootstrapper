@@ -8,4 +8,4 @@ read domain
 read db_name
 read db_nonroot_user_name
 read web_application_root # For example: ${HOME}/www
-domain_dir="${web_application_root}/${domain}/public_html" # For example: ${web_application_root}/${domain}/public_html
+read domain_dir # For example: ${web_application_root}/${domain}/public_html
