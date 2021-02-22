@@ -1,21 +1,21 @@
 #!/bin/bash
 
-## Prepare to download, install and configure MediaWiki and specific backups: ##
+## Prepare to delete "old" MediaWiki filetree and to download, install and configure a new MediaWiki filetree with retrieved latest specific backups:
 cd "${web_application_root}"
 rm -rf "${domain_dir}"
 
-## Download and configure MediaWiki core: ##
+## Download and extract mediawiki core: ##
 wget "${latest_mediawiki_core}" &&
 find . -maxdepth 1 -iname 'mediawiki*.tar.gz' -type f -exec tar -xzf {} \; && 
 find . -maxdepth 1 -type d -iname '*mediawiki*' -execdir mv {} "${domain}" \; &&
 find . -maxdepth 1 -iname 'mediawiki*.tar.gz' -type f -exec rm {} \;
 
-## Test previous operation: ##
+## Test download and extraction: ##
 ll
 
-## Retreive specific backups to the new installation: ##
-cp -a "${specific_backups_dir}"/.htaccess "${domain_dir}" # Only .htaccess file;
-cp -a "${specific_backups_dir}"/* "${domain_dir}" # All files besides .htaccess;
+## Retreive latest specific backups to the new installation:
+cp -a "${latest_specific_backups_dir}"/.htaccess "${domain_dir}" # Only .htaccess file;
+cp -a "${latest_specific_backups_dir}"/* "${domain_dir}" # All files besides .htaccess;
 
-## Test specific backups retreiving: ##
+## Test specific backups retrievement: ##
 ll ${domain_dir}
