@@ -3,7 +3,7 @@
 ## Declare latest mediawiki core download link:
 latest_mediawiki_core="https://releases.wikimedia.org/mediawiki/1.35/mediawiki-1.35.1.tar.gz"
 
-## Prepare to delete "old" MediaWiki filetree and to download, install and configure a new MediaWiki filetree with retrieved latest specific backups:
+## Prepare to delete the old MediaWiki filetree and to download, extract a new MediaWiki filetree, retrieve specific backups and configure:
 cd "${web_application_root}"
 rm -rf "${domain_dir}"
 
