@@ -5,4 +5,4 @@ cp -a "${latest_specific_backups_dir}"/.htaccess "${domain_dir}" # Only .htacces
 cp -a "${latest_specific_backups_dir}"/* "${domain_dir}" # All files besides .htaccess;
 
 ## Test specific backups retrievement:
-ll ${domain_dir}
+ll
